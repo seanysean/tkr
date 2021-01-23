@@ -1,5 +1,66 @@
+// We use SCSS variables for things that are expected to be used a lot and never changed outside of the code editor. CSS variables are expected to change based on JS or the window size.
+
+$block-title-text-color: #323B32;
+$background-color: #5E7D63;
+$header-color: #688F6F;
+$block-background-color: #C2CBC7;
+$slight-shadow: 0 3px 6px RGBa(0,0,0,0.24);
+$block-shadow: 0 2px 3px RGB(20, 20, 20, 0.55);
+$paragraph-color: #343434;
+
+:root {
+    --page-width: 70%;
+    --header-height: 70px;
+    --block-spacing: 20px;
+    --page-height: 100%;
+}
+
+html,
 body {
-    h1 {
-        color: red;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("/images/main.png") fixed center/cover;
+    &::after {
+        content: "";
+        //background: linear-gradient($background-color,transparentize($background-color,0.2));
+        background-size: cover;
+        display: block;
+        position: absolute;
+        height: var(--page-height);
+        width: 100%;
+        top: 0;
+        z-index: -1;
     }
+}
+header {
+    display: block;
+    position: fixed;
+    height: var(--header-height);
+    background: $header-color;
+    color: rgb(198, 238, 213);
+    top: 0;
+    width: 100%;
+    box-shadow: $block-shadow;
+}
+.page {
+    width: var(--page-width);
+    margin: calc(var(--header-height) + var(--block-spacing)) auto var(--block-spacing) auto;
+}
+.block {
+    background: $block-background-color;
+    margin-bottom: var(--block-spacing);
+    padding: 30px 27px;
+    border-radius: 5px;
+    box-shadow: $block-shadow;
+}
+.block-title {
+    margin: 0;
+    color: $block-title-text-color;
+}
+p {
+    font-weight: normal;
+    color: $paragraph-color;
 }
