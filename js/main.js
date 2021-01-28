@@ -27,9 +27,9 @@ const footerHTML = `
     <p class="admission">This is a community project, we are not affiliated with Hypixel or Mojang.</p>
 </div>
 <div class="right">
-    <a href="#">Hypixel Forums</a>
-    <a href="#">Github</a>
-    <a href="#">Discord</a>
+    <a href="https://hypixel.net/forums/turbo-kart-racers.89/" target="_blank">Hypixel Forums</a>
+    <a href="https://github.com/seanysean/tkr" target="_blank">Github</a>
+    <a href="https://discord.gg/DSgDTPk" target="_blank">Discord</a>
 </div>
 `;
 
