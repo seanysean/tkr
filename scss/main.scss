@@ -5,7 +5,9 @@ $background-color: #5E7D63;
 $header-color: #688F6F;
 $block-background-color: #C2CBC7;
 $slight-shadow: 0 3px 3px RGBa(0,0,0,0.24);
-$block-shadow: 0 2px 3px RGB(20, 20, 20, 0.55);
+$slighter-shadow: 1px 2px 2px RGBa(0,0,0,0.2);
+$block-shadow: 0 2px 3px RGBa(20, 20, 20, 0.55);
+$spread-shadow: 5px 13px 20px RGBa(0,0,0,0.2);
 $paragraph-color: #343434;
 $link-color: #285EC9;
 $card-color: #E7E9E7;
@@ -25,10 +27,11 @@ body {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     //background: url("/images/main.png") fixed center/cover;
+    background: $background-color;
     &::after {
         content: "";
         //background: linear-gradient($background-color,transparentize($background-color,0.2));
-        background: $background-color;
+        //background: $background-color;
         background-size: cover;
         display: block;
         position: absolute;
@@ -52,6 +55,7 @@ header {
     padding: 0 20px;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
     a {
         text-decoration: none;
     }
@@ -85,7 +89,7 @@ header {
 footer {
     background: $block-background-color;
     margin-bottom: var(--block-spacing);
-    padding: 35px 32px;
+    padding: 35px 40px;
     border-radius: 5px;
     box-shadow: $block-shadow;
 }
@@ -112,12 +116,12 @@ p {
     box-shadow: $slight-shadow;
     border-radius: 3px;
     color: #565656;
-    overflow: hidden;
-    overflow-y: auto;
+    //overflow-y: auto;
     &.resource-pack {
         padding: 0;
         .card-image {
             width: 100%;
+            border-radius: 3px 3px 0 0;
         }
         .description {
             padding: 15px;
@@ -159,11 +163,60 @@ p {
     margin: 0 0 10px 0;
     font-size: 30px;
 }
+.dropdown {
+    transition: 0.1s ease;
+    float: right;
+    cursor: pointer;
+    padding: 3px;
+    box-sizing: border-box;
+    z-index: 2;
+    color: #2E2E2E;
+    position: relative;
+    i {
+        color: #707070;
+    }
+    &:hover,
+    &.selected {
+        background: #e2e2e2;
+        box-shadow: $slighter-shadow;
+        //#E7E9E7
+    }
+    .dropdown-options {
+        z-index: 1;
+        position: absolute;
+        transition: 0.25s ease;
+        opacity: 0;
+        display: none;
+        box-shadow: $slighter-shadow,
+                    $spread-shadow;
+        top: 100%;
+        right: 0;
+        &.open {
+            opacity: 1;
+        }
+        .option {
+            text-decoration: none;
+            padding: 3px;
+            display: block;
+            color: #333;
+            background: #e2e2e2;
+            font-size: 14px;
+            text-align: right;
+            &:hover {
+                i {
+                    color: #53715b;
+                }
+            }
+        }
+    }
+}
 .mvpblue {
-    color: #3CE6E6;
+    //color: #3CE6E6; Hypixel color
+    color: #37c7c7;
 }
 .vip {
-    color: #3CE63C;
+    //color: #3CE63C; Hypixel color
+    color: #35c135;
 }
 .player {
     padding: 3px 0;

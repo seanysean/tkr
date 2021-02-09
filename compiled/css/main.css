@@ -13,10 +13,10 @@ body {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #5E7D63;
 }
 body::after {
   content: "";
-  background: #5E7D63;
   background-size: cover;
   display: block;
   position: absolute;
@@ -35,11 +35,12 @@ header {
   color: #c6eed5;
   top: 0;
   width: 100%;
-  box-shadow: 0 2px 3px RGB(20, 20, 20, 0.55);
+  box-shadow: 0 2px 3px RGBa(20, 20, 20, 0.55);
   display: flex;
   padding: 0 20px;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
 }
 header a {
   text-decoration: none;
@@ -73,9 +74,9 @@ header nav a:hover i {
 footer {
   background: #C2CBC7;
   margin-bottom: var(--block-spacing);
-  padding: 35px 32px;
+  padding: 35px 40px;
   border-radius: 5px;
-  box-shadow: 0 2px 3px RGB(20, 20, 20, 0.55);
+  box-shadow: 0 2px 3px RGBa(20, 20, 20, 0.55);
 }
 
 .block-title {
@@ -103,14 +104,13 @@ p {
   box-shadow: 0 3px 3px RGBa(0, 0, 0, 0.24);
   border-radius: 3px;
   color: #565656;
-  overflow: hidden;
-  overflow-y: auto;
 }
 .card-block.resource-pack {
   padding: 0;
 }
 .card-block.resource-pack .card-image {
   width: 100%;
+  border-radius: 3px 3px 0 0;
 }
 .card-block.resource-pack .description {
   padding: 15px;
@@ -152,12 +152,55 @@ p {
   font-size: 30px;
 }
 
+.dropdown {
+  transition: 0.1s ease;
+  float: right;
+  cursor: pointer;
+  padding: 3px;
+  box-sizing: border-box;
+  z-index: 2;
+  color: #2E2E2E;
+  position: relative;
+}
+.dropdown i {
+  color: #707070;
+}
+.dropdown:hover, .dropdown.selected {
+  background: #e2e2e2;
+  box-shadow: 1px 2px 2px RGBa(0, 0, 0, 0.2);
+}
+.dropdown .dropdown-options {
+  z-index: 1;
+  position: absolute;
+  transition: 0.25s ease;
+  opacity: 0;
+  display: none;
+  box-shadow: 1px 2px 2px RGBa(0, 0, 0, 0.2), 5px 13px 20px RGBa(0, 0, 0, 0.2);
+  top: 100%;
+  right: 0;
+}
+.dropdown .dropdown-options.open {
+  opacity: 1;
+}
+.dropdown .dropdown-options .option {
+  text-decoration: none;
+  padding: 3px;
+  display: block;
+  color: #333;
+  background: #e2e2e2;
+  font-size: 14px;
+  text-align: right;
+}
+.dropdown .dropdown-options .option:hover i {
+  color: #53715b;
+}
+
 .mvpblue {
-  color: #3CE6E6;
+  color: #37c7c7;
 }
 
 .vip {
-  color: #3CE63C;
+  color: #35c135;
 }
 
 .player {
