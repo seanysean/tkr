@@ -1,7 +1,11 @@
+//dropdown.style.top = el.getBoundingClientRect().top + document.documentElement.scrollTop + el.offsetHeight + 1 + 'px';
+//dropdown.style.right = (document.documentElement.clientWidth - el.getBoundingClientRect().right) + 'px';
+// ^ Some code for positioning an absolute element (dropdown) at the bottom of any other element (el)
+
 const root = document.documentElement;
 const resizeCheck = new ResizeObserver(updatePageHeight);
 
-let currentlyOpenDropdown = [];
+let currentlyOpenDropdowns = [];
 
 function updatePageHeight() {
     let pageHeight = document.documentElement.offsetHeight;
@@ -31,6 +35,7 @@ function close(el) {
     setTimeout(()=>{
         el.style.display = 'none';
     },100);
+    //debugger;
 }
 
 const headerHTML = `
@@ -56,29 +61,61 @@ $('header')[0].innerHTML = headerHTML;
 $('footer')[0].innerHTML = footerHTML;
 
 function handleDropdown(el,e) {
-    console.log(currentlyOpenDropdown);
-    if (currentlyOpenDropdown[0] === undefined) {
-        e.stopPropagation();
-    } else if (currentlyOpenDropdown[0] !== el) {
-        searchForOpenDropdown();
-        e.stopPropagation();
+    e.stopPropagation();
+    let found = false;
+    if (currentlyOpenDropdowns.length) {
+        currentlyOpenDropdowns.forEach(dropdown=>{
+            //debugger;
+            if (dropdown[0] === el) {
+                found = true;
+                return;
+            }
+        });
+        // we can assume that a match wasn't found [LOL this assumption didn't work because return; only stopped the forEach() function from running]
+        searchForOpenDropdowns();
     }
-    const dropdown = el.querySelectorAll('.dropdown-options')[0];
-    //dropdown.style.top = el.getBoundingClientRect().top + document.documentElement.scrollTop + el.offsetHeight + 1 + 'px';
-    //dropdown.style.right = (document.documentElement.clientWidth - el.getBoundingClientRect().right) + 'px';
-    el.classList.add('selected');
-    show(dropdown);
-    //debugger;
-    //console.log(el);
-    currentlyOpenDropdown = [el,dropdown];
+    if (!found) {
+        //debugger;
+        /*console.log(currentlyOpenDropdowns);
+        if (currentlyOpenDropdowns[0] === undefined) {
+            e.stopPropagation();
+        } else if (currentlyOpenDropdowns[0] !== el) {
+            searchForOpenDropdown();
+            e.stopPropagation();
+        }*/
+
+        const dropdown = el.querySelectorAll('.dropdown-options')[0];
+        el.classList.add('selected');
+        show(dropdown);
+        //debugger;
+        //console.log(el);
+        currentlyOpenDropdowns.push([el,dropdown]);
+    }
 }
-function searchForOpenDropdown() {
-    if (currentlyOpenDropdown[1]) {
-        close(currentlyOpenDropdown[1]);
-        currentlyOpenDropdown[0].classList.remove('selected');
-        currentlyOpenDropdown = [];
-    }
+function searchForOpenDropdowns() {
+    //debugger;
+    /*if (currentlyOpenDropdowns[1]) {
+        close(currentlyOpenDropdowns[1]);
+        currentlyOpenDropdowns[0].classList.remove('selected');
+        currentlyOpenDropdowns = [];
+    }*/
+    currentlyOpenDropdowns.forEach((dropdown,index)=>{
+        close(dropdown[1]);
+        dropdown[0].classList.remove('selected');
+        //currentlyOpenDropdowns.splice(index,1);
+    });
+    currentlyOpenDropdowns = [];
 }
 
-document.querySelectorAll('.dropdown').forEach(el=>el.addEventListener('click',event=>{handleDropdown(el,event)}));
-document.body.addEventListener('click',searchForOpenDropdown);
+document.querySelectorAll('.dropdown').forEach(el=>{
+    el.addEventListener('click',event=>{
+        handleDropdown(el,event);
+        console.log('hi');
+    });
+});
+document.body.addEventListener('click',e=>{
+    //debugger;
+    //e.stopPropagation();
+    searchForOpenDropdowns();
+    console.log('hi2');
+});

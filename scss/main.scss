@@ -4,13 +4,13 @@ $block-title-text-color: #323B32;
 $background-color: #5E7D63;
 $header-color: #688F6F;
 $block-background-color: #C2CBC7;
-$slight-shadow: 0 3px 3px RGBa(0,0,0,0.24);
+$slight-shadow: 1px 1px 2px RGBa(0,0,0,0.24);
 $slighter-shadow: 1px 2px 2px RGBa(0,0,0,0.2);
 $block-shadow: 0 2px 3px RGBa(20, 20, 20, 0.55);
-$spread-shadow: 5px 13px 20px RGBa(0,0,0,0.2);
+$spread-shadow: 0 13px 30px RGBa(0,0,0,0.2);
 $paragraph-color: #343434;
 $link-color: #285EC9;
-$card-color: #E7E9E7;
+$card-color: #dce6e2;
 
 :root {
     --page-width: 30%;
@@ -50,7 +50,7 @@ header {
     color: rgb(198, 238, 213);
     top: 0;
     width: 100%;
-    box-shadow: $block-shadow;
+    box-shadow: $slight-shadow;
     display: flex;
     padding: 0 20px;
     align-items: center;
@@ -89,7 +89,7 @@ header {
 footer {
     background: $block-background-color;
     margin-bottom: var(--block-spacing);
-    padding: 35px 40px;
+    padding: 20px 40px;
     border-radius: 5px;
     box-shadow: $block-shadow;
 }
@@ -177,29 +177,51 @@ p {
     }
     &:hover,
     &.selected {
-        background: #e2e2e2;
+        background: #e9f5f0; //#dce6e2
         box-shadow: $slighter-shadow;
         //#E7E9E7
     }
     .dropdown-options {
         z-index: 1;
         position: absolute;
-        transition: 0.25s ease;
+        transition: 0.1s ease;
         opacity: 0;
         display: none;
-        box-shadow: $slighter-shadow,
-                    $spread-shadow;
+        box-shadow: $slighter-shadow;
         top: 100%;
         right: 0;
+        overflow: hidden;
+        &::after {
+            transition: 0.2s ease-in;
+            content: "";
+            display: block;
+            position: absolute;
+            background: #e9f5f0;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            //border-radius: 50%;
+        }
         &.open {
             opacity: 1;
+            box-shadow: $slighter-shadow,
+                    $spread-shadow;
+            &::after {
+                width: 150%;
+                height: 150%;
+                opacity: 1;
+            }
         }
         .option {
             text-decoration: none;
             padding: 3px;
             display: block;
             color: #333;
-            background: #e2e2e2;
+            //background: #e9f5f0;
             font-size: 14px;
             text-align: right;
             &:hover {
