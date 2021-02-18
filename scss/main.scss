@@ -4,18 +4,19 @@ $block-title-text-color: #323B32;
 $background-color: #5E7D63;
 $header-color: #688F6F;
 $block-background-color: #C2CBC7;
-$slight-shadow: 1px 1px 2px RGBa(0,0,0,0.24);
+$slight-shadow: 1px 1px 3px RGBa(0,0,0,0.24);
 $slighter-shadow: 1px 2px 2px RGBa(0,0,0,0.2);
-$block-shadow: 0 2px 3px RGBa(20, 20, 20, 0.55);
+$block-shadow: 1px 2px 3px RGBa(20, 20, 20, 0.55);
 $spread-shadow: 0 13px 30px RGBa(0,0,0,0.2);
+$slight-spread-shadow: 2px 4px 10px RGBa(0,0,0,0.1);
 $paragraph-color: #343434;
 $link-color: #285EC9;
 $card-color: #dce6e2;
 
 :root {
-    --page-width: 30%;
+    --page-width: 50%;
     --header-height: 70px;
-    --block-spacing: 20px;
+    --block-spacing: 40px;
     --page-height: 100%;
 }
 
@@ -116,15 +117,90 @@ p {
     box-shadow: $slight-shadow;
     border-radius: 3px;
     color: #565656;
+    transition: 0.25s;
     //overflow-y: auto;
+    &.resource-pack:hover {
+        box-shadow: $slight-shadow,
+                    $slight-spread-shadow;
+        .download {
+            opacity: 1;
+        }
+        .image-area .card-image {
+            width: 110%;
+        }
+    }
     &.resource-pack {
         padding: 0;
-        .card-image {
+        position: relative;
+        .download {
+            position: absolute;
+            bottom: 14px;
+            right: 10px;
+            background: #dce6e2;
+            opacity: 0;
+        }
+        .forum-link {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #fff;
+            i {
+                position: relative;
+                padding: 5px;
+                border-radius: 50%;
+                transition: 0.25s ease;
+                z-index: 1;
+            }
+            .popup-text {
+                position: absolute;
+                width: 140px;
+                font-size: 13px;
+                opacity: 0;
+                transition: 0.25s ease;
+                right: 0;
+                padding: 5px;
+                color: #2E2E2E;
+            }
+            &:hover {
+                .popup-text {
+                    opacity: 1;
+                    right: 15px;
+                    background: #dce6e2;
+                    padding: 4.5px; //ignore these magic numbers and pretend you never saw them
+                    padding-left: 10px;
+                    border-radius: 15px 0 0 15px;
+                }
+                i {
+                    background: #dce6e2;
+                    color: #2E2E2E;
+                }
+            }
+        }
+        .image-area {
             width: 100%;
+            height: 196px;
+            display: block;
             border-radius: 3px 3px 0 0;
+            position: relative;
+            .image-container {
+                width: 100%;
+                height: 196px;
+                display: block;
+                position: relative;
+                overflow: hidden;
+                .card-image {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    transition: 0.25s ease;
+                }
+            }
         }
         .description {
             padding: 15px;
+            margin-top: -4px; //No idea why we need this
             .avatar {
                 width: 50px;
                 height: 50px;
@@ -139,10 +215,15 @@ p {
             }
             .infos {
                 margin-left: 10px;
+                width: 80%;
             }
             .title {
                 color: #2E2E2E;
                 font-weight: 500;
+                overflow: hidden;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }
@@ -174,14 +255,18 @@ p {
     position: relative;
     i {
         color: #707070;
+        display: inline;
     }
     &:hover,
     &.selected {
-        background: #e9f5f0; //#dce6e2
+        background: #e9f5f0 !important; //#dce6e2
         box-shadow: $slighter-shadow;
+        opacity: 1 !important;
+        //opacity: 0.85;
         //#E7E9E7
     }
     .dropdown-options {
+        background: transparent;
         z-index: 1;
         position: absolute;
         transition: 0.2s ease;
@@ -295,11 +380,13 @@ footer {
 @media (max-width: 1650px) {
     :root {
         --page-width: 50%;
+        --block-spacing: 30px;
     }
 }
 @media (max-width: 1360px) {
     :root {
         --page-width: 60%;
+        --block-spacing: 20px;
     }
 }
 @media (max-width: 1110px) {

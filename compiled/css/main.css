@@ -1,7 +1,7 @@
 :root {
-  --page-width: 30%;
+  --page-width: 50%;
   --header-height: 70px;
-  --block-spacing: 20px;
+  --block-spacing: 40px;
   --page-height: 100%;
 }
 
@@ -35,7 +35,7 @@ header {
   color: #c6eed5;
   top: 0;
   width: 100%;
-  box-shadow: 1px 1px 2px RGBa(0, 0, 0, 0.24);
+  box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.24);
   display: flex;
   padding: 0 20px;
   align-items: center;
@@ -76,7 +76,7 @@ footer {
   margin-bottom: var(--block-spacing);
   padding: 20px 40px;
   border-radius: 5px;
-  box-shadow: 0 2px 3px RGBa(20, 20, 20, 0.55);
+  box-shadow: 1px 2px 3px RGBa(20, 20, 20, 0.55);
 }
 
 .block-title {
@@ -101,25 +101,97 @@ p {
   flex: 1;
   padding: 20px;
   background: #dce6e2;
-  box-shadow: 1px 1px 2px RGBa(0, 0, 0, 0.24);
+  box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.24);
   border-radius: 3px;
   color: #565656;
+  transition: 0.25s;
+}
+.card-block.resource-pack:hover {
+  box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.24), 2px 4px 10px RGBa(0, 0, 0, 0.1);
+}
+.card-block.resource-pack:hover .download {
+  opacity: 1;
+}
+.card-block.resource-pack:hover .image-area .card-image {
+  width: 110%;
 }
 .card-block.resource-pack {
   padding: 0;
+  position: relative;
 }
-.card-block.resource-pack .card-image {
+.card-block.resource-pack .download {
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  background: #dce6e2;
+  opacity: 0;
+}
+.card-block.resource-pack .forum-link {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+}
+.card-block.resource-pack .forum-link i {
+  position: relative;
+  padding: 5px;
+  border-radius: 50%;
+  transition: 0.25s ease;
+  z-index: 1;
+}
+.card-block.resource-pack .forum-link .popup-text {
+  position: absolute;
+  width: 140px;
+  font-size: 13px;
+  opacity: 0;
+  transition: 0.25s ease;
+  right: 0;
+  padding: 5px;
+  color: #2E2E2E;
+}
+.card-block.resource-pack .forum-link:hover .popup-text {
+  opacity: 1;
+  right: 15px;
+  background: #dce6e2;
+  padding: 4.5px;
+  padding-left: 10px;
+  border-radius: 15px 0 0 15px;
+}
+.card-block.resource-pack .forum-link:hover i {
+  background: #dce6e2;
+  color: #2E2E2E;
+}
+.card-block.resource-pack .image-area {
   width: 100%;
+  height: 196px;
+  display: block;
   border-radius: 3px 3px 0 0;
+  position: relative;
+}
+.card-block.resource-pack .image-area .image-container {
+  width: 100%;
+  height: 196px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.card-block.resource-pack .image-area .image-container .card-image {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.25s ease;
 }
 .card-block.resource-pack .description {
   padding: 15px;
+  margin-top: -4px;
 }
 .card-block.resource-pack .description .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 1px 1px 2px RGBa(0, 0, 0, 0.24);
+  box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.24);
 }
 .card-block.resource-pack .description .avatar,
 .card-block.resource-pack .description .infos,
@@ -129,10 +201,15 @@ p {
 }
 .card-block.resource-pack .description .infos {
   margin-left: 10px;
+  width: 80%;
 }
 .card-block.resource-pack .description .title {
   color: #2E2E2E;
   font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-block .more {
   font-weight: bold;
@@ -164,12 +241,15 @@ p {
 }
 .dropdown i {
   color: #707070;
+  display: inline;
 }
 .dropdown:hover, .dropdown.selected {
-  background: #e9f5f0;
+  background: #e9f5f0 !important;
   box-shadow: 1px 2px 2px RGBa(0, 0, 0, 0.2);
+  opacity: 1 !important;
 }
 .dropdown .dropdown-options {
+  background: transparent;
   z-index: 1;
   position: absolute;
   transition: 0.2s ease;
@@ -277,11 +357,13 @@ footer .admission {
 @media (max-width: 1650px) {
   :root {
     --page-width: 50%;
+    --block-spacing: 30px;
   }
 }
 @media (max-width: 1360px) {
   :root {
     --page-width: 60%;
+    --block-spacing: 20px;
   }
 }
 @media (max-width: 1110px) {

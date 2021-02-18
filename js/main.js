@@ -11,8 +11,8 @@ function updatePageHeight() {
     let pageHeight = document.documentElement.offsetHeight;
     root.style.setProperty('--page-height',pageHeight + 'px');
 }
-resizeCheck.observe(document.body);
-updatePageHeight();
+//resizeCheck.observe(document.body);
+//updatePageHeight();
 
 function i(el) {
     return document.getElementById(el);
