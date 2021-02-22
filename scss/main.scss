@@ -73,7 +73,7 @@ header {
             margin: 0 5px;
             opacity: 0;
             transition: 0.25s ease;
-            color: #dedede;
+            color: #dffbe5;
         }
         &:hover {
             i {
@@ -125,8 +125,14 @@ p {
         .download {
             opacity: 1;
         }
-        .image-area .card-image {
+        .image-area .image-container::after {
+            opacity: 1;
+        }
+        .image-area .image-container .card-image {
             width: 110%;
+        }
+        .forum-link i {
+            opacity: 1;
         }
     }
     &.resource-pack {
@@ -150,6 +156,7 @@ p {
                 border-radius: 50%;
                 transition: 0.25s ease;
                 z-index: 1;
+                opacity: 0;
             }
             .popup-text {
                 position: absolute;
@@ -187,7 +194,20 @@ p {
                 height: 196px;
                 display: block;
                 position: relative;
+                border-radius: 3px 3px 0 0;
                 overflow: hidden;
+                &::after {
+                    opacity: 0;
+                    content: "";
+                    display: block;
+                    background: RGBa(0,0,0,0.3);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: 0.15s linear;
+                }
                 .card-image {
                     width: 100%;
                     position: absolute;
@@ -229,13 +249,13 @@ p {
     }
     .more {
         font-weight: bold;
-        color: $link-color;
+        color: #505050;
         text-decoration: none;
         display: block;
         margin-top: 10px;
         transition: 0.1s ease;
         &:hover {
-            color: darken($link-color,20);
+            color: $link-color;
         }
     }
 }

@@ -59,7 +59,7 @@ header nav a i {
   margin: 0 5px;
   opacity: 0;
   transition: 0.25s ease;
-  color: #dedede;
+  color: #dffbe5;
 }
 header nav a:hover i {
   opacity: 1;
@@ -112,8 +112,14 @@ p {
 .card-block.resource-pack:hover .download {
   opacity: 1;
 }
-.card-block.resource-pack:hover .image-area .card-image {
+.card-block.resource-pack:hover .image-area .image-container::after {
+  opacity: 1;
+}
+.card-block.resource-pack:hover .image-area .image-container .card-image {
   width: 110%;
+}
+.card-block.resource-pack:hover .forum-link i {
+  opacity: 1;
 }
 .card-block.resource-pack {
   padding: 0;
@@ -138,6 +144,7 @@ p {
   border-radius: 50%;
   transition: 0.25s ease;
   z-index: 1;
+  opacity: 0;
 }
 .card-block.resource-pack .forum-link .popup-text {
   position: absolute;
@@ -173,7 +180,20 @@ p {
   height: 196px;
   display: block;
   position: relative;
+  border-radius: 3px 3px 0 0;
   overflow: hidden;
+}
+.card-block.resource-pack .image-area .image-container::after {
+  opacity: 0;
+  content: "";
+  display: block;
+  background: RGBa(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.15s linear;
 }
 .card-block.resource-pack .image-area .image-container .card-image {
   width: 100%;
@@ -213,14 +233,14 @@ p {
 }
 .card-block .more {
   font-weight: bold;
-  color: #285EC9;
+  color: #505050;
   text-decoration: none;
   display: block;
   margin-top: 10px;
   transition: 0.1s ease;
 }
 .card-block .more:hover {
-  color: #173674;
+  color: #285EC9;
 }
 
 .card-title {
