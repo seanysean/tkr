@@ -5,7 +5,7 @@ $background-color: #5E7D63;
 $header-color: #688F6F;
 $block-background-color: #C2CBC7;
 $slight-shadow: 1px 1px 3px RGBa(0,0,0,0.24);
-$slighter-shadow: 1px 2px 2px RGBa(0,0,0,0.2);
+$slighter-shadow: 1px 1px 3px RGBa(0,0,0,0.1);
 $block-shadow: 1px 2px 3px RGBa(20, 20, 20, 0.55);
 $spread-shadow: 0 13px 30px RGBa(0,0,0,0.2);
 $slight-spread-shadow: 2px 4px 10px RGBa(0,0,0,0.1);
@@ -86,6 +86,23 @@ header {
     width: var(--page-width);
     margin: calc(var(--header-height) + var(--block-spacing)) auto var(--block-spacing) auto;
 }
+.button-link {
+    background: #e9f5f0; // linear-gradient(#e9f5f0,#d5dcda);
+    background-position: center;
+    padding: 7px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    display: table; //lol why does this work
+    border-radius: 3px;
+    margin: 20px auto 0 auto;
+    box-shadow: $slight-shadow;
+    transition: 0.3s ease;
+    color: #2E2E2E;
+    &:hover {
+        box-shadow: $slighter-shadow, $slight-spread-shadow;
+        color: #000;
+    }
+}
 .block,
 footer {
     background: $block-background-color;
@@ -103,7 +120,8 @@ p {
     color: $paragraph-color;
 }
 .card-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--block-spacing);
     margin-top: 20px;
     
@@ -122,17 +140,14 @@ p {
     &.resource-pack:hover {
         box-shadow: $slight-shadow,
                     $slight-spread-shadow;
-        .download {
-            opacity: 1;
-        }
-        .image-area .image-container::after {
+        .download,
+        .image-area .image-container::after,
+        .forum-link i,
+        .image-area .pack-summary {
             opacity: 1;
         }
         .image-area .image-container .card-image {
             width: 110%;
-        }
-        .forum-link i {
-            opacity: 1;
         }
     }
     &.resource-pack {
@@ -140,8 +155,8 @@ p {
         position: relative;
         .download {
             position: absolute;
-            bottom: 14px;
-            right: 10px;
+            top: 10px;
+            right: 0;
             background: #dce6e2;
             opacity: 0;
         }
@@ -189,6 +204,18 @@ p {
             display: block;
             border-radius: 3px 3px 0 0;
             position: relative;
+            .pack-summary,
+            .image-container::after {
+                opacity: 0;
+                transition: 0.15s linear;
+            }
+            .pack-summary {
+                position: absolute;
+                top: 0;
+                padding: 20px;
+                color: #eee;
+
+            }
             .image-container {
                 width: 100%;
                 height: 196px;
@@ -197,19 +224,18 @@ p {
                 border-radius: 3px 3px 0 0;
                 overflow: hidden;
                 &::after {
-                    opacity: 0;
                     content: "";
                     display: block;
-                    background: RGBa(0,0,0,0.3);
+                    background: RGBa(0,0,0,0.6);
                     width: 100%;
                     height: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    transition: 0.15s linear;
                 }
                 .card-image {
-                    width: 100%;
+                    display: block;
+                    width: 101%; //I have to do this for some reason, or else it doesn't cover entire area when there is a scrollbar??? very wierd stuff
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -221,6 +247,9 @@ p {
         .description {
             padding: 15px;
             margin-top: -4px; //No idea why we need this
+            width: 90%;
+            position: relative;
+
             .avatar {
                 width: 50px;
                 height: 50px;
@@ -228,14 +257,13 @@ p {
                 box-shadow: $slight-shadow;
             }
             .avatar,
-            .infos,
-            .download {
+            .infos {
                 display: inline-block;
                 vertical-align: top;
             }
             .infos {
                 margin-left: 10px;
-                width: 80%;
+                width: calc(80% - 30px);
             }
             .title {
                 color: #2E2E2E;
@@ -264,18 +292,31 @@ p {
     margin: 0 0 10px 0;
     font-size: 30px;
 }
+
+.with-filters {
+    position: relative;
+    z-index: 1;
+}
+.filters {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
 .dropdown {
     transition: 0.1s ease;
     float: right;
     cursor: pointer;
-    padding: 3px;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 3;
     color: #2E2E2E;
     position: relative;
     i {
         color: #707070;
         display: inline;
+        pointer-events: none;
     }
     &:hover,
     &.selected {
@@ -284,6 +325,9 @@ p {
         opacity: 1 !important;
         //opacity: 0.85;
         //#E7E9E7
+    }
+    .dropdown-picked {
+        padding: 5px;
     }
     .dropdown-options {
         background: transparent;
@@ -296,6 +340,7 @@ p {
         top: 100%;
         right: 0;
         overflow: hidden;
+        margin-top: -1px; // lol yes 
         &::after {
             transition: 0.15s ease;
             content: "";
@@ -322,19 +367,40 @@ p {
                 opacity: 1;
             }
         }
+        &:not(.align-left) .option {
+            text-align: right;
+            i {
+                margin-right: 0;
+            }
+        }
         .option {
             text-decoration: none;
-            padding: 3px;
+            padding: 5px;
             display: block;
             color: #333;
+            white-space: nowrap;
             //background: #e9f5f0;
-            font-size: 14px;
-            text-align: right;
             &:hover {
                 i {
                     color: #53715b;
                 }
             }
+            i {
+                display: inline-block;
+                width: 20px;
+                text-align: center;
+                margin-right: 3px;
+            }
+        }
+    }
+}
+.filters .dropdown {
+    .dropdown-picked {
+        padding: 5px 13px;
+    }
+    .dropdown-options .option {
+        &:hover {
+            background: #dbe6e2;
         }
     }
 }

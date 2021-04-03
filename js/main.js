@@ -22,7 +22,7 @@ function $(el) {
 }
 
 function show(el) {
-    console.log('show!');
+    //console.log('show!');
     el.style.display = 'block';
     setTimeout(()=>{
         el.classList.add('open');
@@ -30,7 +30,7 @@ function show(el) {
     //debugger;
 }
 function close(el) {
-    console.log('close');
+    //console.log('close');
     el.classList.remove('open');
     setTimeout(()=>{
         el.style.display = 'none';
@@ -43,7 +43,7 @@ const headerHTML = `
 <nav>
     <a href="#" class="nav-link"><i class="fas fa-medal"></i>Leaderboards</a>
     <a href="#" class="nav-link"><i class="fas fa-film"></i>Videos</a>
-    <a href="#" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
+    <a href="/resourcepacks.html" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
 </nav>`;
 const footerHTML = `
 <div class="left">
@@ -61,6 +61,7 @@ $('header')[0].innerHTML = headerHTML;
 $('footer')[0].innerHTML = footerHTML;
 
 function handleDropdown(el,e) {
+    el = el.parentElement;
     e.stopPropagation();
     let found = false;
     if (currentlyOpenDropdowns.length) {
@@ -107,15 +108,21 @@ function searchForOpenDropdowns() {
     currentlyOpenDropdowns = [];
 }
 
-document.querySelectorAll('.dropdown').forEach(el=>{
+/*document.querySelectorAll('.dropdown').forEach(el=>{
     el.addEventListener('click',event=>{
         handleDropdown(el,event);
-        console.log('hi');
+        //console.log('hi');
     });
-});
+});*/
 document.body.addEventListener('click',e=>{
     //debugger;
     //e.stopPropagation();
-    searchForOpenDropdowns();
-    console.log('hi2');
+    if (e.target.matches('.dropdown-picked')) {
+        //debugger;
+        handleDropdown(e.target,e);
+    } else {
+        //debugger;
+        searchForOpenDropdowns();
+    }
+    //console.log('hi2');
 });
