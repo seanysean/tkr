@@ -1,5 +1,6 @@
 [
     {
+        "id": 2,
         "name":"Drift Heat Bar",
         "tags": ["heatbar"],
         "author": 1,
@@ -12,6 +13,7 @@
         "informationLink": "https://hypixel.net/threads/drift-heat-bar-resource-pack.1856342/"
     },
     {
+        "id": 3,
         "name":"Eclipse Neo",
         "tags": ["kart"],
         "author": 3,
@@ -24,6 +26,7 @@
         "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
     },
     {
+        "id": 4,
         "name": "Clean Heatbar for TKR",
         "tags": ["heatbar"],
         "author": 2,

@@ -2,6 +2,7 @@
 //dropdown.style.right = (document.documentElement.clientWidth - el.getBoundingClientRect().right) + 'px';
 // ^ Some code for positioning an absolute element (dropdown) at the bottom of any other element (el)
 
+const isLocal = (window.location.hostname === 'localhost');
 const root = document.documentElement;
 const resizeCheck = new ResizeObserver(updatePageHeight);
 
@@ -39,11 +40,11 @@ function close(el) {
 }
 
 const headerHTML = `
-<a href="/" class="logo">TKR</a>
+<a href="${isLocal ? '/' : '/tkr/'}" class="logo">TKR</a>
 <nav>
     <a href="#" class="nav-link"><i class="fas fa-medal"></i>Leaderboards</a>
     <a href="#" class="nav-link"><i class="fas fa-film"></i>Videos</a>
-    <a href="/resourcepacks.html" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
+    <a href="${isLocal ? '/' : '/tkr/'}resourcepacks.html" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
 </nav>`;
 const footerHTML = `
 <div class="left">

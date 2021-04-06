@@ -369,11 +369,22 @@ p {
   margin-right: 3px;
 }
 
+.no-packs {
+  text-align: center;
+  width: 100%;
+  grid-column: span 2;
+  font-size: 30px;
+  color: #555;
+}
+
 .filters .dropdown .dropdown-picked {
   padding: 5px 13px;
 }
 .filters .dropdown .dropdown-options .option:hover {
   background: #dbe6e2;
+}
+.filters .dropdown .dropdown-options .option[data-option=none] {
+  color: transparent;
 }
 
 .mvpblue {
