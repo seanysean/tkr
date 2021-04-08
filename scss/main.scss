@@ -147,7 +147,7 @@ p {
             opacity: 1;
         }
         .image-area .image-container .card-image {
-            width: 110%;
+            //width: 110%;
         }
     }
     &.resource-pack {
@@ -172,6 +172,7 @@ p {
                 transition: 0.25s ease;
                 z-index: 1;
                 opacity: 0;
+                color: #2E2E2E;
             }
             .popup-text {
                 position: absolute;
@@ -194,7 +195,6 @@ p {
                 }
                 i {
                     background: #dce6e2;
-                    color: #2E2E2E;
                 }
             }
         }
@@ -210,11 +210,18 @@ p {
                 transition: 0.15s linear;
             }
             .pack-summary {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                font-weight: 100;
                 position: absolute;
-                top: 0;
+                height: 100%;
+                top: -5px;
                 padding: 20px;
-                color: #eee;
-
+                font-size: 16px;
+                color: #383838;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                cursor: default;
             }
             .image-container {
                 width: 100%;
@@ -226,7 +233,8 @@ p {
                 &::after {
                     content: "";
                     display: block;
-                    background: RGBa(0,0,0,0.6);
+                    background: linear-gradient(RGBa(220,230,226,0.8),RGBa(220,230,226,1));
+                    //background: RGBa(220,230,226,0.8);
                     width: 100%;
                     height: 100%;
                     position: absolute;
@@ -235,7 +243,7 @@ p {
                 }
                 .card-image {
                     display: block;
-                    width: 101%; //I have to do this for some reason, or else it doesn't cover entire area when there is a scrollbar??? very wierd stuff
+                    width: 101%; //I have to do this for some reason, or else it doesn't cover entire area when there is a scrollbar??? very weird stuff
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -245,11 +253,7 @@ p {
             }
         }
         .description {
-            padding: 15px;
-            margin-top: -4px; //No idea why we need this
-            width: 90%;
             position: relative;
-
             .avatar {
                 width: 50px;
                 height: 50px;
@@ -270,7 +274,6 @@ p {
                 font-weight: 500;
                 overflow: hidden;
                 white-space: nowrap;
-                overflow: hidden;
                 text-overflow: ellipsis;
             }
         }
@@ -287,6 +290,24 @@ p {
         }
     }
 }
+.description-inner {
+    position: relative;
+    padding: 15px;
+    width: 90%;
+}
+.description-tags {
+    padding: 5px 5px 0 15px;
+    margin-bottom: -5px;
+    font-size: 13px;
+    .tag {
+        margin-right: 10px;
+        font-weight: 600;
+        color: #447544;
+        i {
+            color: #3a613a;
+        }
+    }
+}
 .card-title {
     color: #505050;
     margin: 0 0 10px 0;
@@ -295,7 +316,7 @@ p {
 
 .with-filters {
     position: relative;
-    z-index: 1;
+    z-index: 4;
 }
 .filters {
     position: absolute;
@@ -304,6 +325,17 @@ p {
     right: 10px;
     font-size: 20px;
     font-weight: 400;
+    .dropdown {
+        .dropdown-options {
+            .option {
+                padding: 7px 10px;
+                i {
+                    width: 25px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }
 .dropdown {
     transition: 0.1s ease;

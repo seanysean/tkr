@@ -17,7 +17,7 @@
         "name":"Eclipse Neo",
         "tags": ["kart"],
         "author": 3,
-        "description": "Replaces the Blue Shell Eclipse kart",
+        "description": "Replaces the Blueshell Eclipse kart",
         "background": "3.png",
         "downloads": {
             "1.8": "http://www.mediafire.com/file/tp0471ljuqf8f4j/%2521_Blueshell_Inc_-_Eclipse_Neo.zip/file",
@@ -33,8 +33,942 @@
         "description": "Shows when are you able when to safely drift again. Even though the download is for 1.8, it will work on any version.",
         "background": "4.png",
         "downloads": {
-            "1.8": "https://cdn.discordapp.com/attachments/416335806345641984/739976644835540992/Clean_Heatbar_1.8.zip"
+            "1.8+": "https://cdn.discordapp.com/attachments/416335806345641984/739976644835540992/Clean_Heatbar_1.8.zip"
         },
         "informationLink": "https://hypixel.net/threads/resource-pack-clean-heatbar-for-tkr.3203073/"
+    },
+    {
+        "id": 5,
+        "name":"Reaper",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces Blueshell Dante Kart",
+        "background": "5.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/f69tt38c9h3bdwd/%2521_Blueshell_Inc_-_Reaper.zip/file",
+            "1.12": "https://www.mediafire.com/file/v7obwpx717r9ors/%21_Blueshell_Inc_-_Reaper_%A76%5B%A751.12%A76%5D%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 6,
+        "name":"Commander Eagle",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Blue Eagle kart",
+        "background": "6.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/582nd1qbk3w7duy/%2521_Blueshell_Inc_-_Commander_Eagle.zip/file",
+            "1.12": "https://www.mediafire.com/file/0905l6fsuptc6v5/%21_Blueshell_Inc_-_Commander_Eagle_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 7,
+        "name":"Galactic Relic",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Phantom kart",
+        "background": "7.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/mzmkek4eum9jir3/%2521_Blueshell_Inc_-_Galactic_Relic.zip/file",
+            "1.12": "https://www.mediafire.com/file/9j56fwn3ntxw58k/%21_Blueshell_Inc_-_Refurbished_Relic_%A76%5B%A75%A712.12%A76%5D%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 8,
+        "name":"Classic Ender Runner",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Ender Runner",
+        "background": "8.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/3k1x29ed18azjc9/%2521_Blueshell_Inc_-_Classic_Ender_Runner.zip/file",
+            "1.12": "https://www.mediafire.com/file/j2abebf3b146134/%21_Blueshell_Inc_-_Classic_Ender_Runner_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 9,
+        "name":"Umbreon Eclipse",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Eclipse kart",
+        "background": "9.png",
+        "downloads": {
+            "1.8": "https://www.mediafire.com/file/xuih7q88a7dahdu/%21_Blueshell_Inc_-_Umbreon_Eclipse.zip/file",
+            "1.12": "https://www.mediafire.com/file/vgcatyax43gs074/%21_Blueshell_Inc_-_Umbreon_Eclipse_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 10,
+        "name":"Hell Eagle",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "The Blood Hawk vehicle from F-Zero, replaces the Blueshell Blue Eagle kart",
+        "background": "10.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/zdsgz5hhpnb8xw2/%21_Blueshell_Inc_-_Hell_Eagle.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 11,
+        "name":"Pumpka McBoo",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Pumpkin McScream kart",
+        "background": "11.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/ys1uuusexxbobto/%2521_Blueshell_Inc_-_Pumpka_McBoo.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 12,
+        "name":"Dark Pumpkin McScream",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Pumpkin McScream kart",
+        "background": "12.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/rmaovz0z2jrnkta/%2521_Blueshell_Inc_-_Dark_Pumpkin_McScream.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 13,
+        "name":"Hex",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Pumpkin McScream kart",
+        "background": "13.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/l20a475xy9y9mrr/%2521_Blueshell_Inc_-_Hex.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 14,
+        "name":"Wither Warrior",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Ender Runner kart",
+        "background": "14.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/r2ju2q93u37ekhi/%2521_Blueshell_Inc_-_Wither_Warrior.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 15,
+        "name":"Flamers Pizza / Poggers Pizza",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Phantom kart. Atomix888 made a joke about a Flamers Pizza back in September 2020, and I told him I'd make it if he supplied a logo... and I guess I didn't technically lie. I made it, it's just been half a year. Oh, and the Poggers Pizza thing was him changing his idea. It's the same thing but looks slightly different.",
+        "background": "15.png",
+        "downloads": {
+            "1.12 (Flamers)": "https://www.mediafire.com/file/xxsfuj5ljq8szt1/%2521_Blueshell_Inc_-_Flamers_Pizza.zip/file",
+            "1.12 (Poggers)": "https://www.mediafire.com/file/iwjingisyjxl2g8/%2521_Blueshell_Inc_-_Poggers_Pizza.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 16,
+        "name":"Rust Bucket",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Turbobrine Diablo kart",
+        "background": "16.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/c4uamcig1aeqi1f/%2521_Turbobrine_-_Rust_Bucket.zip/file",
+            "1.12": "https://www.mediafire.com/file/zuvs7vp6ptxu97k/%21_Turbobrine_-_Rust_Bucket_%A76%5B%A751.12%A76%5D%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 17,
+        "name":"Mega Impact Maniac",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Turbobrine Impact Maniac kart",
+        "background": "17.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/57pdpnkx88u5acb/%2521_Turbobrine_-_Mega_Impact_Maniac.zip/file",
+            "1.12": "https://www.mediafire.com/file/j2idcxua8q6p2xp/%21_Turbobrine_-_Mega_Impact_Maniac_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 18,
+        "name":"Checkmate",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Turbobrine Junker kart",
+        "background": "18.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/vmbbe3d96czij25/%2521_Turbobrine_-_Checkmate.zip/file",
+            "1.12": "https://www.mediafire.com/file/xkm04o84h95lm2l/%21_Turbobrine_-_Checkmate_%A76%5B%A751.12%A76%5D%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 19,
+        "name":"Greatest Hits",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Glacius kart",
+        "background": "19.png",
+        "downloads": {
+            "1.8": "Rhttp://www.mediafire.com/file/hc2q2apvfpj9uf8/%2521_Sphax_Corp_-_Greatest_Hits.zip/file",
+            "1.12": "https://www.mediafire.com/file/dbzqbjlwlyfb8qu/%21_Sphax_Corp_-_Greatest_Hits_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 20,
+        "name":"Megagolem the Mighty",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Silver Shadow kart, based off a meme Hellpest made",
+        "background": "20.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/330rj9n99ovnh9y/%2521_Sphax_Corp_-_Megagolem_the_Mighty.zip/file",
+            "1.12": "http://www.mediafire.com/file/2g38ykqb0vqd0rq/%2521_Sphax_Corp_-_Megagolem_the_Mighty_%25C2%25A76%255B%25C2%25A751.12%25C2%25A76%25C2%25A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 21,
+        "name":"Testifikart",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Glacius kart",
+        "background": "21.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/2twaobn9eyxlylc/%21_Sphax_Corp_-_Testifikart_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 22,
+        "name":"Platinum Smelted",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Golden Ace kart",
+        "background": "22.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/1b8z0i1y8r2wk4q/%21_Sphax_Corp_-_Platinum_Smelted.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 23,
+        "name":"Sponsorship",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Golden Ace kart",
+        "background": "23.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/x3p5769xygjktgb/%21_Sphax_Corp_-_Sponsorship.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 24,
+        "name":"Crusted Ruby",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Street Sprinter kart. THIS KART IS A RECOLOR OF THE SCRAPPED STARRY CAMO KART. I DID NOT MAKE THE ORIGINAL, ONLY THIS RECOLOR.",
+        "background": "24.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/wybg4j97osqdt58/%21_Sphax_Corp_-_Crusted_Ruby.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 25,
+        "name":"Zor",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Hypesweggen 'The Stache' kart",
+        "background": "25.png",
+        "downloads": {
+            "1.12 (Logo)": "https://www.mediafire.com/file/kefe1ej6duhsadq/%21_Hypesweggen_-_Zor_%28Logo%29.zip/file",
+            "1.12 (No Logo)": "https://www.mediafire.com/file/a4omzi4u3tjedr4/%21_Hypesweggen_-_Zor_%28Simplified%29.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 26,
+        "name":"Frosmoth",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Hypesweggen Flurry Flier kart",
+        "background": "26.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/2fhfqcu7jfl0r2k/%2521_Hypesweggen_-_Frosmoth.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 27,
+        "name":"The Snaker",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Slothdinger Goldline kart",
+        "background": "27.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/2m03pjx8wiebd8a/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 28,
+        "name":"PURPLE",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Slothdinger Goldline kart. Pack might look different than screenshot because the screenshot was taken before I had to replace my hard drive, and I had to remake the pack after that.",
+        "background": "28.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/iitzngsua1s6kt0/%2521_Slothdinger_-_PURPLE.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 29,
+        "name":"Retro Industries - Dr. Omeletguy",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Slothdinger Goldline kart. Source: Dr. Robotnik's ship from the original Sonic games.",
+        "background": "29.png",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/zdlg87zdmzjlidr/%2521_Retro_Industries_-_Dr._Omeletguy.zip/file",
+            "1.12": "https://www.mediafire.com/file/snjr6hu81s1s96a/%21_Retro_Industries_-_Dr._Omeletguy_%A76%5B%A751.12%A76%A7r.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 30,
+        "name":"Hykia - Turbo Sofa",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Slothdinger Sunrise kart. Gonna be honest, this was a joke I made after I got the idea, but for some reason the <strike>numbskulls</strike> lovely people in the discord wanted me to release it. So blame them.",
+        "background": "30.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/f9s03pix8qmbkbr/%2521_Hykia_-_Turbo_Sofa.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 31,
+        "name":"Hell Eagle",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Commander Eagle Goggles. Source: Blood Falcon from the F-Zero series.",
+        "background": "31.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/90czev7elirq1ym/%21_Hell_Eagle_Helmet.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 32,
+        "name":"Retro Industries - Mega Man",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Ocean Headline. Source: Mega Man",
+        "background": "32.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/rqg81wsi46u4cqh/%2521_Retro_Industries_-_Mega_Man_Helmet.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 33,
+        "name":"Retro Industries - Quint",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Vintage Biker. Source: Quint from Mega Man World 2",
+        "background": "33.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/74ngcfiwli1uxs7/%2521_Retro_Industries_-_Quint_Helmet.zip/file",
+            "1.12 (Alternate)": "http://www.mediafire.com/file/xy5b6u9vyv59x1o/%2521_Retro_Industries_-_Quint_Helmet_%2528Alt%2529.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 34,
+        "name":"Retro Industries - X",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Diamond Bonnet. Source: X from Mega Man X",
+        "background": "34.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/p2b5o9p3oskaoct/%2521_Retro_Industries_-_X_Helmet.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 35,
+        "name":"Meme Team - Sanics",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Race Red Headline, Ocean Headline, Sunset Headline, Amethyst Classico, Ruby Classico, and Emerald Classico. Source: The Sanic Meme (Original Model From Smash Heroes, recolors made by Hypixel, Me, and Former Members of the Smash Heroes community)",
+        "background": "35.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/j12gycqtogafg8t/%21_Sanic_Helmets.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 36,
+        "name":"RedHead Missile Helmets.",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Wah-Bang! Classico. Can be either the red, green, or blue missile.",
+        "background": "36.png",
+        "downloads": {
+            "1.12 (Red missile)": "https://www.mediafire.com/file/mprek9rlms3myk1/file",
+            "1.12 (Green missile)": "https://www.mediafire.com/file/i1m8icvujah51gh/file",
+            "1.12 (Blue missile)": "https://www.mediafire.com/file/kjoc7si4rac8j80/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 37,
+        "name":"White Pumpkin Spice",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "Replaces Pumpkin Spice Classico",
+        "background": "37.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/js0qq474kaijra9/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 38,
+        "name":"Commander Eagle Fix",
+        "tags": ["helmet"],
+        "author": 3,
+        "description": "I finally fixed the Commander Eagle helmet. I mean no offense to whoever made it, but it was clear that it was just an existing model retextured, and as such it looked really bad when viewed from the side. I did fix it, though. The colors don't blend perfectly, but oh well.",
+        "background": "38.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/kfymj0trsuia5it/%2521_Fixed_Commander_Eagle.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 39,
+        "name":"Worthless Horns",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Sets all horns to randomly play any of the horns in the pack, because you hardly hear most of them. (And because I'm a filthy non who can't even purchase most of them.) You will get a message if you try and apply it in 1.9 or later. However, the pack works the same in all versions.",
+        "background": "39.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/r8kprl8pm6lysu5/%2521_Worthless_Horns.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 40,
+        "name":"Better Horns",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Sets three sounds for every horn. You will get a message if you try and apply it in 1.9 or later. However, the pack works the same in all versions.",
+        "background": "40.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/kz73c3aci85kyt2/%2521_Better_Horns.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 41,
+        "name":"Louder Jerry? Horn",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Just makes the Jerry Horn louder. Note: This pack will only work for 1.12. However, if you wish to use it in 1.8, simply edit the sounds.json file (a simple text edit will work,) and replace \"entity.villager.ambient\" with \"mob.villager.idle\".",
+        "background": "41.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/844gm5repovlyco/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 42,
+        "name":"Pat Cashman as the Announcer",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Replaces the announcer with voice clips by Pat Cashman from Super Smash Bros. Brawl. You will get a message if you try and apply it in 1.9 or later. However, the pack works the same in all versions.",
+        "background": "42.png",
+        "downloads": {
+            "1.8+": "https://www.mediafire.com/file/9b5y71mfn9i8rn7/%21_Cashman_Announcer.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 43,
+        "name":"Dean Harrington as the Announcer",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Replaces the announcer with voice clips by Dean Harrington from Super Smash Bros. Melee. It will get a message if you try and apply it in 1.9 or later. However, the pack works the same in all versions.",
+        "background": "43.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/6r7b6fo9ob7vxo8/%2521_Harrington_Announcer.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 44,
+        "name":"Jeff Manning as the Announcer",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Replaces the announcer with voice clips by Jeff Manning from the original Super Smash Bros. It will get a message if you try and apply it in 1.9 or later. However, the pack works the same in all versions.",
+        "background": "44.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/8b7k6xjm54dcd66/%2521_Manning_Announcer.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 45,
+        "name":"Xander Mobus as the Announcer",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Replaces the announcer with voice clips by Xander Mobus from Super Smash Bros. Ultimate. It will get a message if you try and apply it in 1.9 or later. However, the pack works the same in all versions.",
+        "background": "45.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/bjlcix9rsfevtr7/%2521_Mobus_Announcer.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 46,
+        "name":"Team Fortress 2 Announcer",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Replaces the announcer with voice clips from Team Fortress 2. This works the same in all versions.",
+        "background": "46.png",
+        "downloads": {
+            "1.8+": "https://www.mediafire.com/file/c6behyzrv5vnfgy/%21_TF2_Announcer.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 47,
+        "name":"Merasmus Announcer",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Replaces the announcer with Merasmus' voice clips from Team Fortress 2. This works the same in all versions.</br>P.S.: I included a special sound that plays in somewhat rare instances under certain circumstances. It'll be easy to find if you dig through the files, but I want to know if anyone actually encounters it naturally.",
+        "background": "47.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/hq8nbptw15yvhe4/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 48,
+        "name":"Villager Racing Jams",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Yes I know I put the wrong year for the description, I didn't want to retake the screenshot after I fixed it. Use the thought-to-be-lost racing album by Testificate Jams! Listen to their covers of - Ready to Race - The Mutant Gorge - Hidden Mythology - Arcade Mayhem - The Lost Jungle ... and many more! Produced by the 2011 band, enjoy their 2015 racing music collection!",
+        "background": "48.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/j9fa93b3jbrkqb7/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 49,
+        "name":"Spooky Scary Skeletunes",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "The songs sound more Halloween-like, since the noteblock sound is replaced with someone saying \"Boo.\" It sounds better in-game than it does reading that, trust me.",
+        "background": "49.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/xa81t2i7wih2xmx/%2521_Spooky_Scary_Skeletunes.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 50,
+        "name":"Off-Key Music",
+        "tags": ["sound"],
+        "author": 3,
+        "description": "Do you hate yourself? Do you sometimes think \"Boy, this music just sounds too good! I wish it was painful to listen to!\"? If yes, seek help, but also use this pack!",
+        "background": "50.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/g2k2cwlfg1x3fwl/%2521_Off-Key_Music.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 51,
+        "name":"Hypixel Billboards",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces the five billboards to display every major hypixel game as of December 4th 2018. (The time releasing this.)",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/nruz6yyk3k39h4y/%2521_Hypixel_Billboards.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 52,
+        "name":"Classic Games Billboards",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Same as Hypixel Billboards, but all five billboard cycle through only the classic games.",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/j688vek5fj09g1l/%2521_CG_Billboard.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 53,
+        "name":"Waluigi Coins",
+        "tags": ["other"],
+        "author": 3,
+        "description": "You will never understand how much pain creating this meme caused me.",
+        "background": "53.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/js8bolh3nvaokfh/%21_Waluigi_Coins.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 54,
+        "name":"Swift Scurrier Coins",
+        "tags": ["other"],
+        "author": 3,
+        "description": "I would be genuinely surprised if there is a single person here other than me who understands the reference.",
+        "background": "54.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/xm4krk8593sycgw/%21_Scurry_Coins.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 55,
+        "name":"Christmas-Colored Coins",
+        "tags": ["other"],
+        "author": 3,
+        "description": "This actually rotates between green and red, but I can't exactly show that in a still image.",
+        "background": "55.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/atgstgngez6mifj/%2521_Christmas-Colored_Coins.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 56,
+        "name":"Speedster Suit",
+        "tags": ["suit"],
+        "author": 3,
+        "description": "Replaces Blueshell Inc suit. I was browsing a resource pack site, looking at custom armor textures, trying to get ideas for suit retextures. Most of the textures were memes (as the site is basically useless for trying to get actually good textures,) when I found a nice set based on The Flash. That's how this came to be. Literally it. Also, I think this will work the same in any version, but the download says 1.12 because it's the only one I tested this in.",
+        "background": "56.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/4pulj9ahqjj7zz3/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 57,
+        "name":"HD Tinman Suit",
+        "tags": ["suit"],
+        "author": 3,
+        "description": "Replaces Sphax Corp. suit. Source: Iron Man's suit, named after a character in Smash Heroes. Tested in 1.12 only, but should work in all versions.",
+        "background": "57.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/7wm27jplij8zj1f/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 58,
+        "name":"Reinforced Racing Gear",
+        "tags": ["suit"],
+        "author": 3,
+        "description": "Replaces Slothdinger suit. I couldn't think of a better name. I wanted to make a new suit pack, but was running thin on ideas. At least it looks nice. Tested in 1.12 only, but should work in all versions.",
+        "background": "58.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/cwepailp8dltjyb/%2521_Reinforced_Racing_Gear.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 59,
+        "name":"Gun Gun",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces Snowballs. I got this idea and went through with it to meme. Snowballs are replaced with guns, and since I have no way of making the fired snowballs appear any differently, the guns shoot guns.",
+        "background": "59.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/wq9ffym8z7gkdez/%2521_Gun_Gun.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 60,
+        "name":"Fire Gun Gun",
+        "tags": ["other","sound"],
+        "author": 3,
+        "description": "Replaces Fireballs. Despite the name, this is not a recolor of the normal Gun Gun Pack, as this replaces Fireballs instead with a slightly changed sound effect.",
+        "background": "60.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/2962z6gbhr2i5kt/%2521_Fire_Gun_Gun.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 61,
+        "name":"Rocket Launcher Launcher",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces Green Missile, Red Missile, and Blue Torpedo. I might make seprate versions later that turn each missile into their own packs, but for now you get the whole package.",
+        "background": "61.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/o8xvesnm2zjw5nd/%2521_Rocket_Launcher_Launcher.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 62,
+        "name":"Notched Magmasword",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces Notched Swords. Oh hey, finally an item pack that isn't a model ported from Smash Heroes. I mean, it's a model ported from Warlords, but still.",
+        "background": "62.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/rp937whs6o5gnur/%2521_Notched_Magmasword.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 63,
+        "name":"Cake Bomb",
+        "tags": ["other","sound"],
+        "author": 3,
+        "description": "Replaces Silly Bombs. Side effects of using the Cake Bomb pack includes hearing loud burps for literally no reason.",
+        "background": "63.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/oc290osylj3e2dy/%2521_Cake_Bomb.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 64,
+        "name":"Blue-Eyes White Missile",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces Red Missiles. I was recently reminded that the TKR Discord has a role called this that no one has gotten a high enough MEE6 rank to get, and got inspired to make this.",
+        "background": "64.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/h5dnx8c3get95fy/%2521_Blue-Eyes_White_Missile.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 65,
+        "name":"Red-Eyes Black Missile",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces Green Missiles. Similar story to the Blue-Eyes White Missile, except this one was just because it's a similar origin to Blue-Eyes White Dragon, where the two dragons basically function the same except that Red-Eyes is weaker. So I made this.",
+        "background": "65.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/89talai5k0sn8on/%2521_Red-Eyes_Black_Missile.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 66,
+        "name":"Galaxy-Eyes Photon Missile",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces Blue Missiles/Torpedos. Same as the previous two (Red Eyes Black Missile & Blue-Eyes White Missile), except it's a much more obscure variant. Screenshot also shows those other two.",
+        "background": "66.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/2pfktz2wy6lwtd2/%2521_Galaxy-Eyes_Photon_Missile.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 67,
+        "name":"TKR Inventory",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Changed inventory screen to a TKR theme.",
+        "background": "67.png",
+        "downloads": {
+            "1.8+": "http://www.mediafire.com/file/jm7xsc954jgjcjx/%2521_TKR_Inventory.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 68,
+        "name":"TKR Title Screen",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Replaces the background of the title screen with the old TKR lobby. Version used is the download on Hellpest's assets thread, and slightly edited to fix some bugs in that version of the world. It might work in other versions, but was only tested in 1.12.",
+        "background": "68.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/qnq00fomoa9rijo/%2521_TKR_Title_Screen.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 69,
+        "name":"Trophy Counter",
+        "tags": ["other"],
+        "author": 3,
+        "description": "This pack replaces the star icon used for the win prefix in chat with a trophy.",
+        "background": "69.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/hrbvcen0jzdty0y/Trophy_Counter.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 70,
+        "name":"Blue Otter",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Blueshell Blue Eagle kart. An edit made at the request of SeaOtterFan. I told him I'd make it if both this and Tribal Otter were made public. v1 is the original request, v2 is an edit made after Otter got the prize for a TKR discord event. (Technically nightlibra won, but they didn't want the reward and gave it to Otter.)",
+        "background": "70.png",
+        "downloads": {
+            "1.12 v1": "https://www.mediafire.com/file/j8qe1fmk75b8pgh/%21_Blueshell_Inc_-_Blue_Otter.zip/file",
+            "1.12 v2": "https://www.mediafire.com/file/7fcev0tv4bw2xm3/%21_Blueshell_Inc_-_Blue_Otter_Again.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 71,
+        "name":"Tribal Otter",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Sphax Corp Tribal Hunter kart. An edit made at the request of SeaOtterFan. I told him I'd make Blue Otter if both this and Blue Otter were made public.",
+        "background": "71.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/eruu6qlimj847y1/%21_Sphax_Corp_-_Tribal_Otter.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 72,
+        "name":"Pink Spirit Rider",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Hypesweggen Spirit Rider. RulerRay (possibly jokingly) asked for a pink Spirit Rider. I made one. This is not that pack. This is a pack I made when I decided to completely re-do it from scratch. I'll still supply the old version, though.",
+        "background": "72.png",
+        "downloads": {
+            "1.12 (old)": "http://www.mediafire.com/file/4f7c7dgr7gqt1h5/%2521_Pink_Spirit_Rider.zip/file",
+            "1.12": "http://www.mediafire.com/file/dsuutdi9bis9yor/%2521_Pink_Spirit_Rider_-_Better.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 73,
+        "name":"Neon Galaxy",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Replaces the Turbobrine Diablo kart. Made for SurvivalYoshi.",
+        "background": "73.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/ib2jms9sbd25lfl/%2521_Turbobrine_-_Neon_Galaxy.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 74,
+        "name":"Bruh Music",
+        "tags": ["kart"],
+        "author": 3,
+        "description": "Blame C00LDUDE_ for this mess.",
+        "background": "74.png",
+        "downloads": {
+            "1.12": "http://www.mediafire.com/file/307i4ktrbwsbpix/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 75,
+        "name":"Jerry Invasion",
+        "tags": ["kart","sound","other"],
+        "author": 3,
+        "description": "Note about the two versions: Original only changes the first three karts of each brand (aka all pre-2018 karts,) along with all the other changes. Full version also changes all Grand Prix karts to Witches, and all remaining karts to Illagers. This pack changes item textures, horns, karts and more. Click view more information to find the full changelog.",
+        "background": "75.png",
+        "downloads": {
+            "1.12 (Original)": "http://www.mediafire.com/file/vmv784ijaw22775/file",
+            "1.12 (Full)": "http://www.mediafire.com/file/ag9oqqzc3jvjx5s/%2521_%2521_Jerry_Invasion_Full.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 76,
+        "name":"Turbo Kat Racers",
+        "tags": ["kart","sound","other"],
+        "author": 3,
+        "description": "My second major new pack, replacing all the karts with cats. I came up with the name pun first and worked from there. All of the pre-Oct18 karts are replaced, as well as the October, December, and January Grand Prix karts. In addition, several items and various other things are changed. Exclusive to the full version: Every single kart has its own look and texture, despite some being better than others.",
+        "background": "76.png",
+        "downloads": {
+            "1.12": "https://www.mediafire.com/file/rpe662vmrev47p6/%2521_%2521_Turbo_Kat_Racers.zip/file",
+            "1.12 (Full)": "https://www.mediafire.com/file/xri15v06501xsmd/%2521_%2521_Turbo_Kat_Racers_Full.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 77,
+        "name":"My Personal Edit",
+        "tags": ["kart","sound","other"],
+        "author": 3,
+        "description": "A pack I've been working on for months filled with several QOL changes, such as... - Horn sounds slightly change pitch randomly - Untextured items now have custom textures or models - Things such as explosions have more cartoony textures to fit with the rest of the pack - Models have been slightly repositioned to reduce lag  - 1.12 version sets announcer sounds to the Voice/Speech audio setting to allow the volume to be manually changed. - Re-added the removed 6th billboard",
+        "background": "77.png",
+        "downloads": {
+            "1.8": "https://www.mediafire.com/file/hbwrxbb8c9gie6u/%21_%21_%21_%A76%5B%A721.8%A76%5D%A7r_Improved_Turbo_Kart_Racers.zip/file",
+            "1.12": "https://www.mediafire.com/file/6kcjymg5fc4bg7z/%21_%21_%21_%A76%5B%A751.12%A76%5D%A7r_Improved_Turbo_Kart_Racers.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 78,
+        "name":"Lag Reduction Edit",
+        "tags": ["other"],
+        "author": 3,
+        "description": "Sets all blocks to default models to reduce lag. Changes nothing in-game. To clarify, any kart or helmet models with the file in the blocks folder will replace both the item forms (i.e.: holding, wearing, used on armor stands) and the blocks when placed down in the world. These versions of the pack puts them in the items folder, which displays placed down blocks as their vanilla MC appearances. This reduces lag in the lobby and maps, as a lot of them don't account for certain karts or helmets.",
+        "downloads": {
+            "1.8": "http://www.mediafire.com/file/lrv19hmdzbkwcdo/%2521_%2521_Refined_Turbo_Kart_Racers.zip/file",
+            "1.12": "https://www.mediafire.com/file/suqts8rfzm49fpc/%21_%21_%21_%21_1.12_Refined_TKR.zip/file",
+            "1.13": "http://www.mediafire.com/file/z3qmtc8dbvc799h/%2521_%2521_%2521_%2521_1.13_Refined_TKR.zip/file",
+            "1.14": "https://www.mediafire.com/file/av3rdckoqy3i8b7/%21_%21_%21_%21_1.14_Refined_TKR.zip/file",
+            "1.15": "https://www.mediafire.com/file/b47f4k81eh63r6v/TKR_1.15_Patched.zip/file"
+        },
+        "informationLink": "https://hypixel.net/threads/random-resource-packs-i-made.1865380/"
+    },
+    {
+        "id": 79,
+        "name":"Turbo Kart Wii",
+        "tags": ["kart","other"],
+        "author": 4,
+        "description": "Aww, are the Hypixel textures boring you out? Well now you can race in the iconic Mario Kart Wii standard kart! Most of the karts have been remodeled to look like the Wii standard kart with multiple colours based on the player's character! There are some extra models for things like the item box, too! Though you will have to figure out which kart you are using by yourself.",
+        "background": "79.png",
+        "downloads": {
+            "1.8": "https://drive.google.com/drive/folders/11N7HWSjsyFla8q6zhlUhEBQaluc5Pg1j?usp=sharing"
+        },
+        "informationLink": "https://hypixel.net/threads/turbo-kart-wii-fanmade-resource-pack.3091721/"
+    },
+    {
+        "id": 80,
+        "name":"Polardraw Suit",
+        "tags": ["suit"],
+        "author": 5,
+        "description": "Replaces Turbobrine (Diamond Armour)",
+        "background": "80.png",
+        "downloads": {
+            "1.11+": "https://drive.google.com/open?id=1IxKbA26Q2VvhGHFLQCgGm1AVu8WZnxgt"
+        },
+        "informationLink": "https://hypixel.net/threads/tkr-assets-resource-packs-and-maps.1856344/"
     }
 ]

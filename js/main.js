@@ -109,6 +109,16 @@ function searchForOpenDropdowns() {
     currentlyOpenDropdowns = [];
 }
 
+function generateRandomString() {
+    const letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; // Probably should have just google searched for an array - or actually typed 'qwertyuopasdfghjlzxcvbnm' and got a random index from that string.
+    let randomString = '';
+    for (i = 0; i < 9; i++) {
+        const randomSpot = Math.floor(letters.length * Math.random());
+        randomString += letters[randomSpot];
+    }
+    return randomString;
+}
+
 /*document.querySelectorAll('.dropdown').forEach(el=>{
     el.addEventListener('click',event=>{
         handleDropdown(el,event);
