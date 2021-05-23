@@ -1,4 +1,4 @@
-const container = i('stuff-goes-here-lol');
+const container = id('stuff-goes-here-lol');
 const random = generateRandomString();
 const optionsMap = {
     'type': {

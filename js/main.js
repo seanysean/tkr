@@ -3,6 +3,7 @@
 // ^ Some code for positioning an absolute element (dropdown) at the bottom of any other element (el)
 
 const isLocal = (window.location.hostname === 'localhost');
+const relativeAddressRoot = isLocal ? '/' : '/tkr/'; // Github pages adds the /tkr/ after seanysean.github.io. Thus, / doesn't work unless it is locally hosted (or I get a custom domain - which could happen)
 const root = document.documentElement;
 const resizeCheck = new ResizeObserver(updatePageHeight);
 
@@ -15,7 +16,7 @@ function updatePageHeight() {
 //resizeCheck.observe(document.body);
 //updatePageHeight();
 
-function i(el) {
+function id(el) {
     return document.getElementById(el);
 }
 function $(el) {
@@ -40,11 +41,11 @@ function close(el) {
 }
 
 const headerHTML = `
-<a href="${isLocal ? '/' : '/tkr/'}" class="logo">TKR</a>
+<a href="${relativeAddressRoot}" class="logo">TKR</a>
 <nav>
     <a href="#" class="nav-link"><i class="fas fa-medal"></i>Leaderboards</a>
-    <a href="#" class="nav-link"><i class="fas fa-film"></i>Videos</a>
-    <a href="${isLocal ? '/' : '/tkr/'}resourcepacks.html" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
+    <a href="${relativeAddressRoot}videos.html" class="nav-link"><i class="fas fa-film"></i>Videos</a>
+    <a href="${relativeAddressRoot}resourcepacks.html" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
 </nav>`;
 const footerHTML = `
 <div class="left">
@@ -94,6 +95,25 @@ function handleDropdown(el,e) {
         currentlyOpenDropdowns.push([el,dropdown]);
     }
 }
+
+async function getJson(url,includesParameters) {
+    let response;
+    await fetch(`${url}${includesParameters ? '&' : '?'}r=${generateRandomString()}`).then(r=>r.json()).then(r=>response = r);
+    return response;
+}
+
+function addElementsToContainer(container,arrayOfData,formatter,messageIfNoResult) {
+    let containerInnerHTML = '';
+    if (arrayOfData.length) {
+        arrayOfData.forEach(pack=>{
+            containerInnerHTML += formatter(pack);
+        });
+    } else if (messageIfNoResult) {
+        containerInnerHTML = messageIfNoResult;
+    }
+    container.innerHTML = containerInnerHTML; // Instead of adding each pack individually, I store all the HTML in one string (containerInnerHTML) and then add it all at once, and it seems to be significantly faster.
+}
+
 function searchForOpenDropdowns() {
     //debugger;
     /*if (currentlyOpenDropdowns[1]) {

@@ -3,6 +3,9 @@
 $block-title-text-color: #323B32;
 $background-color: #5E7D63;
 $header-color: #688F6F;
+$light-green-text: #447544;
+$dark-green-text: #3a613a;
+$darker-green-text: #2e4c2e;
 $block-background-color: #C2CBC7;
 $slight-shadow: 1px 1px 3px RGBa(0,0,0,0.24);
 $slighter-shadow: 1px 1px 3px RGBa(0,0,0,0.1);
@@ -12,6 +15,13 @@ $slight-spread-shadow: 2px 4px 10px RGBa(0,0,0,0.1);
 $paragraph-color: #343434;
 $link-color: #285EC9;
 $card-color: #dce6e2;
+
+%text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    // make sure parent has a rigid width
+}
 
 :root {
     --page-width: 50%;
@@ -102,6 +112,9 @@ header {
         box-shadow: $slighter-shadow, $slight-spread-shadow;
         color: #000;
     }
+}
+.block {
+    position: relative;
 }
 .block,
 footer {
@@ -272,9 +285,7 @@ p {
             .title {
                 color: #2E2E2E;
                 font-weight: 500;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @extend %text-ellipsis;
             }
         }
     }
@@ -432,6 +443,152 @@ p {
     grid-column: span 2;
     font-size: 30px;
     color: #555;
+}
+.video-container {
+    margin-top: 20px;
+}
+.loading-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    background: $block-background-color;
+    padding: 10px;
+    border-left: 4px solid $dark-green-text;
+    box-shadow: $spread-shadow, $slight-shadow;
+    border-radius: 0 3px 3px 0;
+    p {
+        margin: 0;
+    }
+}
+.loading {
+    background: #b9b9b9 !important;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        background: #7e8e7e;
+        display: block;
+        height: 100%;
+        width: 30%;
+        position: absolute;
+        top: 0;
+        animation: load 1.2s infinite cubic-bezier(1, 1.7, 0.83, 1.2);
+    }
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    70% {
+        left: 0;
+        width: 100%;
+    }
+    80% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+        width: 100%;
+    }
+}
+
+.video {
+    height: 108px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+    color: #343434;
+    text-decoration: none;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    .loading {
+        &.title {
+            height: 25px;
+        }
+        &.duration {
+            height: 20px;
+            width: 40px;
+        }
+        &.meta {
+            height: 15px;
+            width: 30%;
+            margin-top: 7px;
+        }
+        &.author {
+            height: 20px;
+            width: 20%;
+            margin-top: 7px;
+        }
+    }
+    .thumbnail,
+    .info {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .thumbnail {
+        height: 100%;
+        width: 192px;
+        background: #b9b9b9;
+        position: relative;
+        img {
+            height: 100%;
+        }
+        .duration {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: #eee;
+            padding: 0 2px;
+            border-radius: 2px;
+            background-color: #5d5d5d;
+            color: #fff
+        }
+    }
+    .info {
+        //position: relative;
+        width: calc(100% - 220px);
+        padding: 0 10px;
+        .title {
+            font-weight: 700;
+            font-size: 23px;
+            color:#464646;
+            @extend %text-ellipsis;
+        }
+        .meta {
+            font-size: 15px;
+        }
+        .author {
+            font-size: 20px;
+        }
+    }
+    .external {
+        position: absolute;
+        font-size: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        color: $dark-green-text;
+        transition: 0.15s ease;
+        opacity: 0;
+    }
+    &:hover {
+        border-color: $dark-green-text;
+        .external {
+            opacity: 0.8;
+        }
+        .title {
+            color: $darker-green-text;
+        }
+        .duration {
+            background-color: $dark-green-text;
+        }
+    }
 }
 .filters .dropdown {
     .dropdown-picked {
