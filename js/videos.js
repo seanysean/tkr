@@ -11,7 +11,20 @@ async function loadData() {
     if (checkForUpdate(videosJson.lastUpdated)) {
         const newStuff = await getJson(`${apiRoot}/update.php?api=youtube`,true);
         if (newStuff.success) {
-            alert('Updated information available! Reload to apply changes.');
+            //alert('Updated information available! Reload to apply changes.');
+            document.body.innerHTML += `<div id="new-stuff-alert" class="toast">
+            <div class="message">Updated information is available</div>
+            <div class="options">
+                <div id="reload-button" class="button">Reload</div>
+                <div id="dismiss-button" class="button">Dismiss</div>
+            </div>
+            </div>`;
+            const t = document.querySelector('.toast');
+            t.style.display = 'block';
+            setTimeout(()=>{
+                t.style.opacity = 1;
+                t.style.bottom = '10px';
+            },300)
         }
         console.log(JSON.stringify(newStuff));
     }

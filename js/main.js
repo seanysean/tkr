@@ -155,5 +155,17 @@ document.body.addEventListener('click',e=>{
         //debugger;
         searchForOpenDropdowns();
     }
+    if (e.target.matches('#reload-button')) {
+        location.reload();
+    }
+    if (e.target.matches('#dismiss-button')) {
+        setTimeout(()=>{
+            const t = document.querySelector('.toast');
+            t.style.opacity = 0;
+            setTimeout(()=>{
+                t.style.display = none;
+            },300)
+        },100);
+    }
     //console.log('hi2');
 });

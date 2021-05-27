@@ -634,6 +634,46 @@ p {
     color: #a28f1b;
     margin-left: 3px;
 }
+.toast {
+    position: fixed;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background: #dce6e2;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: $spread-shadow, $slight-shadow;
+    color: #464646;
+    transition: 0.25s ease;
+    opacity: 0;
+    div {
+        display: inline-block;
+    }
+    .message {
+        color: $darker-green-text;
+        font-weight: 600;
+    }
+    .options {
+        margin-left: 10px;
+    }
+
+}
+.button {
+    padding: 5px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s ease;
+    box-sizing:border-box;
+    border: 1px solid transparent;
+    &:hover {
+        //background: RGBa(0,0,0,0.1);
+        border: 1px solid  $dark-green-text;
+    }
+    &:active {
+        background: RGBa(0,100,50,0.2)
+    }
+}
 footer {
     display: flex;
     justify-content: space-between;
