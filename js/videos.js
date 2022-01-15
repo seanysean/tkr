@@ -1,4 +1,4 @@
-const apiRoot = isLocal ? 'http://localhost:7999' : 'https://turbokartracers-backend.herokuapp.com/';
+const apiRoot = isLocal ? 'http://localhost:7999' : 'https://turbokartracers-backend.000webhostapp.com/';
 const months = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec'];
 const msPerHour = 1000 * 60 * 60; // milliseconds per hour
 
