@@ -6,6 +6,8 @@ const isLocal = (window.location.hostname === 'localhost');
 const relativeAddressRoot = isLocal ? '/' : '/tkr/'; // Github pages adds the /tkr/ after seanysean.github.io. Thus, / doesn't work unless it is locally hosted (or I get a custom domain - which could happen)
 const root = document.documentElement;
 const resizeCheck = new ResizeObserver(updatePageHeight);
+const msPerHour = 1000 * 60 * 60; // milliseconds per hour
+const apiRoot = isLocal ? 'http://localhost:7999' : 'https://turbokartracers-backend.000webhostapp.com/';
 
 let currentlyOpenDropdowns = [];
 
@@ -169,3 +171,12 @@ document.body.addEventListener('click',e=>{
     }
     //console.log('hi2');
 });
+
+function checkForUpdate(timestamp) {
+    const timestampInMs = timestamp * 1000;
+    const twelveHours = msPerHour * 12;
+    const currentTime = Date.now();
+    console.log(currentTime - timestampInMs);
+    console.log(msPerHour * 12);
+    return currentTime - timestampInMs > twelveHours;
+}

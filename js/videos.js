@@ -1,6 +1,4 @@
-const apiRoot = isLocal ? 'http://localhost:7999' : 'https://turbokartracers-backend.000webhostapp.com/';
 const months = ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec'];
-const msPerHour = 1000 * 60 * 60; // milliseconds per hour
 
 async function loadData() {
     const videosJson = await getJson(`${apiRoot}/get_json.php?data=videos`,true);
@@ -83,15 +81,6 @@ function getMostRecentVideos(videosArray) {
     console.log(videosArray);
     videosArray.sort((a,b)=> b.uploadTimestamp - a.uploadTimestamp);
     return videosArray.slice(0,5); // get 5 most recent
-}
-
-function checkForUpdate(timestamp) {
-    const timestampInMs = timestamp * 1000;
-    const twelveHours = msPerHour * 12;
-    const currentTime = Date.now();
-    console.log(currentTime - timestampInMs);
-    console.log(msPerHour * 12);
-    return currentTime - timestampInMs > twelveHours;
 }
 
 loadData();
