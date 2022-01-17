@@ -7,7 +7,6 @@ async function loadData() {
     // });
     addElementsToContainer(id('leaderboard-container'),leaderboardJson.golds.splice(0,10),formatLeaderboardEntry);
     if (checkForUpdate(leaderboardJson.lastUpdated)) {
-        alert('plz');
         const newStuff = await getJson(`${apiRoot}/update.php?api=hypixel`,true);
         if (newStuff.success) {
             //alert('Updated information available! Reload to apply changes.');
