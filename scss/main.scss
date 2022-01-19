@@ -1,8 +1,8 @@
 // We use SCSS variables for things that are expected to be used a lot and never changed outside of the code editor. CSS variables are expected to change based on JS or the window size.
 
 $block-title-text-color: #323B32;
-$background-color: #5E7D63;
-$header-color: #688F6F;
+$background-color: #6D7B6F;
+$header-color: #607263;
 $light-green-text: #447544;
 $dark-green-text: #3a613a;
 $darker-green-text: #2e4c2e;
@@ -51,6 +51,9 @@ body {
         top: 0;
         z-index: -1;
     }
+}
+.hidden {
+    display: none !important;
 }
 header {
     box-sizing: border-box;
@@ -603,13 +606,20 @@ p {
         }
     }
 }
-.mvpblue {
+.mvpblue:hover {
     //color: #3CE6E6; Hypixel color
     color: #37c7c7;
 }
 .vip {
     //color: #3CE63C; Hypixel color
     color: #35c135;
+}
+.username {
+    cursor: pointer;
+    padding: 2px 5px;
+    &:hover {
+        background: RGBa(0,0,0,0.1);
+    }
 }
 .player {
     padding: 3px 0;
@@ -791,5 +801,62 @@ footer {
     header nav a i {
         display: none !important;
         margin: 0;
+    }
+}
+.info-popup {
+    display: grid;
+    position: absolute;
+    background: $card-color;
+    grid-template-columns: 70px 1fr 100px;
+    box-shadow: $slight-shadow,
+    $slight-spread-shadow;
+    border-radius: 3px;
+    overflow: hidden;
+    .avatar {
+        display: block;
+        padding: 20px 0 0 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .main-info {
+        padding: 20px;
+        display: grid;
+        align-items: start;
+        .name {
+            font-size: 20px;
+            color: #565656;
+            font-weight: 600;
+            line-height: 15px;
+            .badge {
+                font-size: 15px;
+                padding: 2px 5px;
+                background: #c7d4ce;
+                margin-left: 5px;
+                border-radius: 3px;
+            }
+        }
+        .stats {
+            margin-top: 10px;
+            font-size: 15px;
+            color: #333;
+            .value {
+                font-weight: 600;
+            }
+        }
+    }
+    .links {
+        background: #c6d2cd;
+        padding: 20px;
+        display: grid;
+        align-items: center;
+        .link {
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            color: #565656;
+            &:hover {
+                color: #333333;
+            }
+        }
     }
 }

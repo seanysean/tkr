@@ -1,0 +1,81 @@
+.top-3 {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr 0.7fr;
+    margin: 20px 15% 0 15%;
+    align-items: bottom;
+    text-align: center;
+    > div {
+        display: grid;
+        grid-template-rows: 80% 1fr 1fr;
+        align-items: end;
+        justify-content: space-around;
+        .placement-circle {
+            background: #abb4b0;
+            border-radius: 50%;
+            position: relative;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                font-family: impact;
+                color: #7a8480;
+            }
+        }
+        &.first-place .placement-circle {
+            width: 10vw;
+            height: 10vw;
+            span {
+                font-size: 70px;
+                color: #6D8471;
+            }
+        }
+        &.second-place .placement-circle {
+            width: 8vw;
+            height: 8vw; /*Would actually be cool if the sizes represented the difference between first place trophies and third place for example */
+            span {
+                font-size: 40px;
+            }
+        }
+        &.third-place .placement-circle {
+            width: 6vw;
+            height: 6vw;
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+    .username {
+        color: #6D8471;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .points {
+        color: #333;
+    }
+}
+.rest-of-the-leaderboard-lol {
+    margin-top: 20px;
+    .leader {
+        color: #434743;
+        width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 30px 1fr 200px;
+        grid-gap: 10px;
+        align-items: center;
+        background: #b6c2bd;
+        padding: 10px;
+        font-size: 20px;
+        .place {
+            text-align: center;
+        }
+        .points {
+            text-align: right;
+            font-size: 17px;
+        }
+        .username {
+            font-weight: 600;
+        }
+    }
+}

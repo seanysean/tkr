@@ -9,7 +9,17 @@ const resizeCheck = new ResizeObserver(updatePageHeight);
 const msPerHour = 1000 * 60 * 60; // milliseconds per hour
 const apiRoot = isLocal ? 'http://localhost:7999' : 'https://turbokartracers-backend.000webhostapp.com/';
 
+const infoPopupEl = document.createElement('div');
+infoPopupEl.classList.add('hidden','info-popup');
+document.body.appendChild(infoPopupEl);
+
+let playerData;
 let currentlyOpenDropdowns = [];
+
+async function loadPlayerData() {
+    playerData = await getJson(`${apiRoot}/get_json.php?data=leaderboard`,true);
+    getJson(`${apiRoot}/update.php?api=hypixel`,true);
+}
 
 function updatePageHeight() {
     let pageHeight = document.documentElement.offsetHeight;
@@ -42,10 +52,20 @@ function close(el) {
     //debugger;
 }
 
+function copyTextToClipboard(text) {
+    const input = document.createElement('textarea');
+    input.classList.add('hidden');
+    document.body.appendChild(input);
+    input.value = text;
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+}
+
 const headerHTML = `
 <a href="${relativeAddressRoot}" class="logo">TKR</a>
 <nav>
-    <a href="#" class="nav-link"><i class="fas fa-medal"></i>Leaderboards</a>
+    <a href="${relativeAddressRoot}leaderboard.html" class="nav-link"><i class="fas fa-medal"></i>Leaderboards</a>
     <a href="${relativeAddressRoot}videos.html" class="nav-link"><i class="fas fa-film"></i>Videos</a>
     <a href="${relativeAddressRoot}resourcepacks.html" class="nav-link"><i class="far fa-images"></i>Resource Packs</a>
 </nav>`;
@@ -141,20 +161,10 @@ function generateRandomString() {
     return randomString;
 }
 
-/*document.querySelectorAll('.dropdown').forEach(el=>{
-    el.addEventListener('click',event=>{
-        handleDropdown(el,event);
-        //console.log('hi');
-    });
-});*/
-document.body.addEventListener('click',e=>{
-    //debugger;
-    //e.stopPropagation();
+document.body.addEventListener('click',async e=>{
     if (e.target.matches('.dropdown-picked')) {
-        //debugger;
         handleDropdown(e.target,e);
     } else {
-        //debugger;
         searchForOpenDropdowns();
     }
     if (e.target.matches('#reload-button')) {
@@ -169,7 +179,13 @@ document.body.addEventListener('click',e=>{
             },300)
         },100);
     }
-    //console.log('hi2');
+    if (e.target.hasAttribute('data-username')) {
+        const usernameThing = e.target.getAttribute('data-username');
+        const theData = await grabDataFromUsername(usernameThing);
+        displayUserInfo(theData,e.target);
+    } else if (!e.target.matches('.link')) {
+        infoPopupEl.classList.add('hidden');
+    }
 });
 
 function checkForUpdate(timestamp) {
@@ -179,4 +195,63 @@ function checkForUpdate(timestamp) {
     console.log(currentTime - timestampInMs);
     console.log(msPerHour * 12);
     return currentTime - timestampInMs > twelveHours;
+}
+
+async function grabDataFromUsername(user) {
+    let returnData;
+    if (!playerData) {
+        await loadPlayerData();
+    }
+    playerData.golds.forEach((player,index)=>{
+        if (player.displayName === user) {
+            player.goldRank = index + 1;
+            returnData = player;
+            return;
+        }
+    });
+    return returnData;
+}
+
+function generateBadge(rank) {
+    let badgeTitle;
+    if (rank === 1) {
+        badgeTitle = 'Top 1';
+    } else if (rank <= 3) {
+        badgeTitle = 'Top 3';
+    } else if (rank <= 10) {
+        badgeTitle = 'Top 10';
+    } else if (rank <= 25) {
+        badgeTitle = 'Top 25';
+    } else if (rank <= 50) {
+        badgeTitle = 'Top 50';
+    }
+    return badgeTitle ? `<span class="badge">${badgeTitle}</span>` : '';
+}
+
+function displayUserInfo(userData,targetEl) {
+    infoPopupEl.classList.remove('hidden');
+    infoPopupEl.innerHTML = `<img class="avatar" src="https://cravatar.eu/avatar/${userData.displayName}/64.png"/>
+    <div class="main-info">
+        <div class="name">${userData.displayName}${generateBadge(userData.goldRank)}</div>
+        <div class="stats">
+            <div class="stat"><span class="value">${userData.gold_trophy}</span> Golds</div>
+            <div class="stat"><span class="value">${userData.coins}</span> Coins</div>
+            <div class="stat"><span class="value">${userData.laps_completed}</span> Laps</div>
+            <div class="stat"><span class="value">${userData.horn}</span> Horn</div>
+        </div>
+    </div>`;
+    if (userData.socialMedia) {
+        let linksHTML = '';
+        infoPopupEl.classList.add('social-media');
+        linksHTML += `<div class="links">`;
+        for (site in userData.socialMedia) {
+            linksHTML += `<a class="link" ${site === 'DISCORD' ? `onclick="copyTextToClipboard('${userData.socialMedia[site]}');this.innerHTML='COPIED'"` : `href="${userData.socialMedia[site]}"`} target="_blank">${site}</a>`;
+        }
+        linksHTML += `</div>`;
+        infoPopupEl.innerHTML += linksHTML;
+    } else {
+        infoPopupEl.classList.remove('social-media');
+    }
+    infoPopupEl.style.top = targetEl.getBoundingClientRect().top + document.documentElement.scrollTop + targetEl.offsetHeight + 'px';
+    infoPopupEl.style.left = targetEl.getBoundingClientRect().left + 'px';
 }
