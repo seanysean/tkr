@@ -536,6 +536,9 @@ p {
 }
 .video .info .author {
   font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .video .external {
   position: absolute;
@@ -581,6 +584,9 @@ p {
 .username {
   cursor: pointer;
   padding: 2px 5px;
+  height: 10px;
+  display: inline-block;
+  min-width: 100px;
 }
 .username:hover {
   background: RGBa(0, 0, 0, 0.1);
@@ -604,6 +610,13 @@ p {
 .player .right-info,
 .player .left-info {
   display: inline-block;
+}
+
+.golds {
+  display: block;
+  height: 10px;
+  min-width: 50px;
+  padding: 2px;
 }
 
 .golds i {

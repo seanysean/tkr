@@ -568,6 +568,9 @@ p {
         }
         .author {
             font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     .external {
@@ -617,6 +620,9 @@ p {
 .username {
     cursor: pointer;
     padding: 2px 5px;
+    height: 10px;
+    display: inline-block;
+    min-width: 100px;
     &:hover {
         background: RGBa(0,0,0,0.1);
     }
@@ -639,6 +645,12 @@ p {
     .left-info {
         display: inline-block;
     }
+}
+.golds {
+    display: block;
+    height: 10px;
+    min-width: 50px;
+    padding: 2px;
 }
 .golds i {
     color: #a28f1b;

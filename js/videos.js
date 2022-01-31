@@ -52,7 +52,17 @@ function formatTimestamp(timestamp) {
 }
 
 function formatVideoLength(youtubeWeirdVideoLengthString) {
-    const times = youtubeWeirdVideoLengthString.match(/\d+/g);
+    let trueAmogusIHateNamingVariablesMoment = youtubeWeirdVideoLengthString;
+    let stringAdditions = '';
+    if (trueAmogusIHateNamingVariablesMoment.charAt(youtubeWeirdVideoLengthString.length-1) !== 'S') {
+        stringAdditions = '0S';
+        if (trueAmogusIHateNamingVariablesMoment.charAt(youtubeWeirdVideoLengthString.length-1) !== 'M') {
+            return 'bruh';
+        }
+    }
+    trueAmogusIHateNamingVariablesMoment += stringAdditions;
+    console.log(trueAmogusIHateNamingVariablesMoment);
+    const times = trueAmogusIHateNamingVariablesMoment.match(/\d+/g);
     /*const timesWithUnits = [];
     const units = ['sec','min','hr'];
     times.forEach((timeInt,index) => {
