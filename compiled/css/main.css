@@ -584,8 +584,10 @@ p {
 .username {
   cursor: pointer;
   padding: 2px 5px;
-  height: 10px;
   display: inline-block;
+}
+.username.loading {
+  height: 10px;
   min-width: 100px;
 }
 .username:hover {

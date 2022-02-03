@@ -620,9 +620,11 @@ p {
 .username {
     cursor: pointer;
     padding: 2px 5px;
-    height: 10px;
     display: inline-block;
-    min-width: 100px;
+    &.loading {
+        height: 10px;
+        min-width: 100px;
+    }
     &:hover {
         background: RGBa(0,0,0,0.1);
     }
